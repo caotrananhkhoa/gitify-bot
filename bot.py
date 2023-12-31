@@ -1,11 +1,16 @@
 import os
+import sys
 from dotenv import load_dotenv
 import random
 
 import discord
 from discord.ext import commands
 
+
+
+
 load_dotenv()
+sys.path.append("Game")
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.all()
