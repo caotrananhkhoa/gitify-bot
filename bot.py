@@ -1,17 +1,10 @@
-import os
 import sys
-from dotenv import load_dotenv
-import random
 
 import discord
 from discord.ext import commands
 
-
-
-
-load_dotenv()
+# Add "Game" directory
 sys.path.append("Game")
-TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.all()
 intents.message_content = True
@@ -28,4 +21,5 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send("Hello!")
 
-bot.run(TOKEN)
+def run(token):
+    bot.run(token)
